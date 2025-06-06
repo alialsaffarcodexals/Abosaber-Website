@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/style.css">
+  <title>FIFA - Abosaber</title>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      fetch('/components/navbar.html').then(r=>r.text()).then(t=>{
+        document.getElementById('nav-placeholder').innerHTML=t;
+      });
+      fetch('/components/footer.html').then(r=>r.text()).then(t=>{
+        document.getElementById('footer-placeholder').innerHTML=t;
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <main class="main">
+    <h1>FIFA Highlights</h1>
+    <div class="video-grid">
+      <div class="video-card"><video controls src="/videos/fifa/placeholder.mp4" poster="/images/fifa/placeholder.jpg"></video><h3 class="video-title">Sample Video</h3></div>
+    </div>
+    <div class="image-gallery">
+      <img src="/images/fifa/placeholder.jpg" alt="FIFA screenshot">
+    </div>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+</html>
